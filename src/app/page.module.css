@@ -1,0 +1,171 @@
+.formBox {
+  display        : flex;
+  flex-flow      : row wrap;
+  align-items    : center;
+  justify-content: space-between;
+
+  background   : #ffff;
+  border       : solid 1px #D8D8D8;
+  width        : 1200px;
+  margin       : 5px auto;
+  margin-top   : 10px;
+  padding      : 10px;
+  border-radius: 10px;
+
+}
+
+.downloadButton {
+  background   : #62CB54;
+  height       : 40px;
+  padding      : 0 10px;
+  border-radius: 10px;
+  font-size    : 12px;
+}
+
+.upload {
+  border         : solid 2px #DBBC49;
+  color:#DBBC49;
+  display        : flex;
+  flex-flow      : row wrap;
+  align-items    : center;
+  justify-content: space-around;
+  border-radius  : 10px;
+
+  height: 40px;
+
+}
+
+.uploadLabel {
+  width  : 100%;
+  height : 40px;
+  padding: 0 10px;
+
+  font-size  : 14px;
+  text-align : center;
+  line-height: 40px;
+}
+
+.details {
+  display  : flex;
+  flex-flow: row wrap;
+
+}
+
+.info {
+  background   : #DBBC49;
+  padding      : 0 10px;
+  margin       : 0 5px;
+  border-radius: 10px;
+
+  font-size  : 12px;
+  line-height: 30px;
+}
+
+.box {
+  background: #ffff;
+}
+
+.printArea {
+  width        : 1123px;
+  position     : relative;
+  display      : flex;
+  flex-flow    : row wrap;
+  border       : 1px solid #111;
+  border-top   : none;
+  border-bottom: none;
+  margin       : 0 auto;
+  padding      : 0;
+}
+
+.paper {
+  width   : 1123px;
+  height  : 794px;
+  overflow: hidden;
+}
+
+.wordsList,
+.translateList {
+  width     : 100%;
+  display   : flex;
+  flex-flow : row wrap;
+  list-style: none;
+}
+
+.translateList {
+  transform        : rotate(180deg) scaleY(-1);
+  -webkit-transform: rotate(180deg) scaleY(-1);
+  -moz-transform   : rotate(180deg) scaleY(-1);
+}
+
+.wordsList>li,
+.translateList>li {
+  position: relative;
+  width   : calc(100% / 3);
+  height  : calc(794px / 3);
+
+  border     : solid 1px rgba(0, 0, 0, 0.322);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.word {
+  display        : flex;
+  flex-flow      : row wrap;
+  justify-content: space-around;
+  align-items    : center;
+  padding        : 10px 20px;
+}
+
+.word>p {
+  width      : 100%;
+  text-align : center;
+  font-weight: bold;
+  font-size  : 30px;
+
+  line-height: 40px;
+}
+
+.word>p>small {
+  width      : 100%;
+  line-height: 40px;
+  font-weight: normal;
+  font-size  : 20px;
+  text-align : center;
+}
+
+.word>i {
+  position: absolute;
+  bottom  : 10px;
+  left    : 0;
+
+  width      : 100%;
+  line-height: 40px;
+  opacity    : .5;
+  font-weight: bold;
+  text-align : center;
+}
+
+.translate {
+  padding          : 10px 20px;
+  line-height      : 40px;
+  font-size        : 18px;
+  text-align       : justify;
+  transform        : scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  -moz-transform   : scaleY(-1);
+  overflow         : hidden;
+  white-space      : pre-line
+}
+
+.translate>i {
+  position: absolute;
+  bottom  : 10px;
+  left    : 0;
+
+  width      : 100%;
+  line-height: 40px;
+  opacity    : .5;
+  font-weight: bold;
+  text-align : center;
+  font-size  : 12px;
+}
