@@ -2,7 +2,11 @@
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import moment from "jalali-moment";
+import localFont from "next/font/local";
 
+const VazirFont = localFont({
+    src: "./fonts/vazir.woff2"
+});
 export default function Home() {
 
   const [fileName, setFileName] = useState("");
@@ -121,8 +125,8 @@ export default function Home() {
                   {
                     pair.map((g: any, index: number) =>
                       <li key={`ww${index}`} className={`${styles.word}`}>
-                        <p>{g.word} <br></br> <small>{g.pronunciation}</small></p>
-                        <i>{g.language}</i>
+                        <p className={`${styles.wordText}`}>{g.word} <br></br> <small className={`${styles.pronunciation}`}>{g.pronunciation}</small></p>
+                        <i className={`${styles.language}`}>{g.language}</i>
                       </li>
                     )
                   }
@@ -133,8 +137,9 @@ export default function Home() {
                   {
                     pair.map((g: any, index: number) =>
                       <li key={`tt-${index}`} className={`${styles.translate}`} >
-                        {g.translate}
-                        <i>{convertToPersianDateOfficial()}</i>
+                        <p className={`${styles.translateText}`}>{g.translate}</p>
+                        <p className={`${VazirFont.className} ${styles.translatePersianText}`}>{g.persian}</p>
+                        <i className={`${styles.date}`}>{convertToPersianDateOfficial()}</i>
                       </li>
                     )
                   }

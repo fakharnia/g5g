@@ -24,7 +24,7 @@
 
 .upload {
   border         : solid 2px #DBBC49;
-  color:#DBBC49;
+  color          : #DBBC49;
   display        : flex;
   flex-flow      : row wrap;
   align-items    : center;
@@ -97,8 +97,8 @@
   -moz-transform   : rotate(180deg) scaleY(-1);
 }
 
-.wordsList>li,
-.translateList>li {
+.word,
+.translate {
   position: relative;
   width   : calc(100% / 3);
   height  : calc(794px / 3);
@@ -116,7 +116,7 @@
   padding        : 10px 20px;
 }
 
-.word>p {
+.wordText {
   width      : 100%;
   text-align : center;
   font-weight: bold;
@@ -125,7 +125,7 @@
   line-height: 40px;
 }
 
-.word>p>small {
+.pronunciation {
   width      : 100%;
   line-height: 40px;
   font-weight: normal;
@@ -133,7 +133,7 @@
   text-align : center;
 }
 
-.word>i {
+.language {
   position: absolute;
   bottom  : 10px;
   left    : 0;
@@ -146,6 +146,12 @@
 }
 
 .translate {
+  display  : flex;
+  flex-flow: column wrap;
+
+  align-items    : center;
+  justify-content: space-between;
+
   padding          : 10px 20px;
   line-height      : 40px;
   font-size        : 18px;
@@ -157,11 +163,19 @@
   white-space      : pre-line
 }
 
-.translate>i {
-  position: absolute;
-  bottom  : 10px;
-  left    : 0;
+.translateText,
+.translatePersianText {
+  width: 100%;
+}
 
+.translatePersianText {
+  line-height: 40px;
+  font-size  : 10px;
+  text-align : center;
+  opacity    : 0.5;
+}
+
+.date {
   width      : 100%;
   line-height: 40px;
   opacity    : .5;
